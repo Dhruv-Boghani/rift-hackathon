@@ -1,0 +1,15 @@
+Drug: CLOPIDOGREL | Gene: CYP2C19 | Risk: Increased metabolism. Lower plasma concentrations decrease probability of benefit. | Recommendation: Consider alternative antidepressant not predominantly metabolized by CYP2C19. If not possible, titrate to higher dose.
+Drug: CLOPIDOGREL | Gene: CYP2C19 | Risk: Increased metabolism. Lower plasma concentrations decrease probability of benefit. | Recommendation: Initiate therapy with recommended starting dose. If no response, consider higher dose or alternative agent.
+Drug: CLOPIDOGREL | Gene: CYP2C19 | Risk: Normal metabolism. | Recommendation: Initiate therapy with recommended starting dose.
+Drug: CLOPIDOGREL | Gene: CYP2C19 | Risk: Reduced metabolism. Higher plasma concentrations may increase side effects. | Recommendation: Initiate therapy with recommended starting dose. Consider slower titration and lower maintenance dose.
+Drug: CLOPIDOGREL | Gene: CYP2C19 | Risk: Reduced metabolism. Higher plasma concentrations may increase side effects. | Recommendation: Consider alternative antidepressant. If not possible, lower starting dose and 50% reduction of maintenance dose.
+Drug: CODEINE | Gene: CYP2D6 | Risk: Increased formation of morphine leading to higher risk of toxicity. | Recommendation: Avoid codeine. Use non-tramadol opioid.
+Drug: CODEINE | Gene: CYP2D6 | Risk: Reduced morphine formation. | Recommendation: Use label recommended dosing. If no response, consider non-tramadol opioid.
+Drug: CODEINE | Gene: CYP2D6 | Risk: Expected morphine formation. | Recommendation: Use codeine label recommended dosing.
+Drug: CODEINE | Gene: CYP2D6 | Risk: Greatly reduced morphine formation leading to diminished analgesia. | Recommendation: Avoid codeine. Use non-tramadol opioid.
+Drug: FLUOROURACIL | Gene: DPYD | Risk: Normal DPD activity. | Recommendation: Use label-recommended dosage.
+Drug: FLUOROURACIL | Gene: DPYD | Risk: Decreased DPD activity (30-70%). Increased toxicity risk. | Recommendation: Reduce starting dose by 50%. Titrate based on toxicity.
+Drug: FLUOROURACIL | Gene: DPYD | Risk: Complete DPD deficiency. Severe toxicity risk. | Recommendation: Avoid 5-fluorouracil. If necessary, use strongly reduced dose with monitoring.
+Drug: SIMVASTATIN | Gene: SLCO1B1 | Risk: Typical myopathy risk. | Recommendation: Prescribe desired starting dose.
+Drug: SIMVASTATIN | Gene: SLCO1B1 | Risk: Increased simvastatin acid exposure. Increased myopathy risk. | Recommendation: Prescribe alternative statin. If simvastatin warranted, limit to <20mg/day.
+Drug: SIMVASTATIN | Gene: SLCO1B1 | Risk: Highly increased myopathy risk. | Recommendation: Prescribe alternative statin.

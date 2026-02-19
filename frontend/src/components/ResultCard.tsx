@@ -1,6 +1,6 @@
 "use client";
 
-import { DrugResult } from "@/lib/mockData";
+import { AnalyzeResponse } from "@/lib/types";
 import {
   Card,
   CardContent,
@@ -17,11 +17,19 @@ import {
 import { Button } from "@/components/ui/button";
 import { RiskBadge } from "./RiskBadge";
 import { SeverityMeter } from "./SeverityMeter";
-import { Download, Copy, Dna, Activity } from "lucide-react";
+import {
+  Download,
+  Copy,
+  Dna,
+  Activity,
+  BrainCircuit,
+  BookOpen,
+  Microscope,
+} from "lucide-react";
 import { toast } from "sonner";
 
 interface ResultCardProps {
-  result: DrugResult;
+  result: AnalyzeResponse;
 }
 
 export function ResultCard({ result }: ResultCardProps) {
@@ -45,16 +53,24 @@ export function ResultCard({ result }: ResultCardProps) {
     toast.success("JSON downloaded");
   };
 
+  // Helper to determine border color based on severity
+  const getSeverityColor = (severity: string) => {
+    switch (severity) {
+      case "critical":
+      case "high":
+        return "oklch(0.577 0.245 27.325)"; // Red-ish
+      case "moderate":
+        return "oklch(0.795 0.184 86.047)"; // Yellow-ish
+      default:
+        return "oklch(0.623 0.184 149.214)"; // Green-ish
+    }
+  };
+
   return (
     <Card
       className="w-full overflow-hidden border-l-4 shadow-md transition-shadow hover:shadow-lg"
       style={{
-        borderLeftColor:
-          result.risk_assessment.severity === "high"
-            ? "oklch(0.577 0.245 27.325)"
-            : result.risk_assessment.severity === "medium"
-              ? "oklch(0.795 0.184 86.047)"
-              : "oklch(0.623 0.184 149.214)",
+        borderLeftColor: getSeverityColor(result.risk_assessment.severity),
       }}
     >
       <CardHeader className="pb-2 bg-gradient-to-r from-transparent to-primary/5">
@@ -128,7 +144,12 @@ export function ResultCard({ result }: ResultCardProps) {
         </div>
 
         {/* Detailed Info Accordion */}
-        <Accordion type="single" collapsible className="w-full">
+        <Accordion
+          type="single"
+          collapsible
+          className="w-full"
+          defaultValue="ai-explanation"
+        >
           <AccordionItem value="clinical" className="border-b-0">
             <AccordionTrigger className="hover:no-underline py-2 px-4 rounded-lg hover:bg-muted/50 data-[state=open]:bg-muted/50">
               <span className="font-semibold">Clinical Recommendation</span>
@@ -153,34 +174,57 @@ export function ResultCard({ result }: ResultCardProps) {
             </AccordionContent>
           </AccordionItem>
 
-          <AccordionItem value="explanation" className="border-b-0 mt-2">
-            <AccordionTrigger className="hover:no-underline py-2 px-4 rounded-lg hover:bg-muted/50 data-[state=open]:bg-muted/50">
-              <span className="font-semibold">AI Biological Explanation</span>
-            </AccordionTrigger>
-            <AccordionContent className="space-y-4 pt-4 px-2">
-              <p className="text-sm leading-relaxed text-foreground/90 font-medium">
-                {result.llm_generated_explanation.summary}
-              </p>
+          {/* AI Explanation Section */}
+          {result.llm_generated_explanation && (
+            <AccordionItem value="ai-explanation" className="border-b-0 mt-4">
+              <AccordionTrigger className="hover:no-underline py-2 px-4 rounded-lg hover:bg-purple-50 dark:hover:bg-purple-900/20 data-[state=open]:bg-purple-50 dark:data-[state=open]:bg-purple-900/20">
+                <div className="flex items-center gap-2 text-purple-700 dark:text-purple-300">
+                  <BrainCircuit className="w-5 h-5" />
+                  <span className="font-semibold">AI Clinical Explanation</span>
+                </div>
+              </AccordionTrigger>
+              <AccordionContent className="space-y-4 pt-4 px-2">
+                <div className="p-4 bg-purple-50/50 dark:bg-purple-900/10 rounded-lg border border-purple-100 dark:border-purple-800 space-y-4">
+                  {/* Summary */}
+                  <div>
+                    <h4 className="font-semibold text-purple-900 dark:text-purple-100 mb-1">
+                      Summary
+                    </h4>
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      {result.llm_generated_explanation.summary}
+                    </p>
+                  </div>
 
-              <div className="space-y-2">
-                <h4 className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-                  Mechanism of Action
-                </h4>
-                <p className="text-sm text-foreground/80 bg-muted/50 p-3 rounded-md border border-border/50">
-                  {result.llm_generated_explanation.biological_mechanism}
-                </p>
-              </div>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    {/* Mechanism */}
+                    <div className="bg-background/50 p-3 rounded-md border border-purple-100 dark:border-purple-800/50">
+                      <h5 className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-purple-600 dark:text-purple-400 mb-2">
+                        <Microscope className="w-3 h-3" /> Biological Mechanism
+                      </h5>
+                      <p className="text-xs text-muted-foreground">
+                        {result.llm_generated_explanation.biological_mechanism}
+                      </p>
+                    </div>
 
-              <div className="space-y-1">
-                <h4 className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-                  Citations
-                </h4>
-                <p className="text-xs italic text-muted-foreground">
-                  {result.llm_generated_explanation.citations}
-                </p>
-              </div>
-            </AccordionContent>
-          </AccordionItem>
+                    {/* Reasoning */}
+                    <div className="bg-background/50 p-3 rounded-md border border-purple-100 dark:border-purple-800/50">
+                      <h5 className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-purple-600 dark:text-purple-400 mb-2">
+                        <BookOpen className="w-3 h-3" /> Clinical Reasoning
+                      </h5>
+                      <p className="text-xs text-muted-foreground">
+                        {result.llm_generated_explanation.clinical_reasoning}
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Citation */}
+                  <div className="text-[10px] text-muted-foreground pt-2 border-t border-purple-200 dark:border-purple-800 flex justify-end italic">
+                    Sources: {result.llm_generated_explanation.citations}
+                  </div>
+                </div>
+              </AccordionContent>
+            </AccordionItem>
+          )}
         </Accordion>
       </CardContent>
     </Card>

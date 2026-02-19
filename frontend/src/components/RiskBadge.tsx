@@ -1,7 +1,7 @@
 import { Badge } from "@/components/ui/badge";
 
 interface RiskBadgeProps {
-  level: "Safe" | "Adjust Dosage" | "Toxic or Ineffective";
+  level: "Safe" | "Adjust Dosage" | "Toxic" | "Ineffective" | "Unknown";
 }
 
 export function RiskBadge({ level }: RiskBadgeProps) {
@@ -16,8 +16,12 @@ export function RiskBadge({ level }: RiskBadgeProps) {
       className =
         "bg-yellow-500 hover:bg-yellow-600 text-white border-transparent";
       break;
-    case "Toxic or Ineffective":
+    case "Toxic":
+    case "Ineffective":
       className = "bg-red-500 hover:bg-red-600 text-white border-transparent";
+      break;
+    case "Unknown":
+      className = "bg-gray-500 hover:bg-gray-600 text-white border-transparent";
       break;
     default:
       className = "bg-gray-500 hover:bg-gray-600 text-white";

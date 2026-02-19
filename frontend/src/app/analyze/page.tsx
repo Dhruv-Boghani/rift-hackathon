@@ -8,16 +8,28 @@ import { DrugInput } from "@/components/DrugInput";
 import { ResultCard } from "@/components/ResultCard";
 import { ShieldCheck, Loader2, ArrowLeft } from "lucide-react";
 import { toast } from "sonner";
-import { MOCK_RESULTS_MULTI, DrugResult } from "@/lib/mockData";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
+import { analyzeDrugRisk } from "@/lib/api";
+import { AnalyzeResponse } from "@/lib/types";
+
+// Mock helper to simulate VCF parsing for the demo
+// In a real app, this would be a server action or another API call
+const MOCK_VCF_PARSER: Record<string, { gene: string; diplotype: string }> = {
+  Clopidogrel: { gene: "CYP2C19", diplotype: "*2/*2" },
+  Warfarin: { gene: "CYP2C9", diplotype: "*1/*1" },
+  Simvastatin: { gene: "SLCO1B1", diplotype: "*5/*5" },
+  Azathioprine: { gene: "TPMT", diplotype: "*3A/*3A" },
+  Fluorouracil: { gene: "DPYD", diplotype: "*2A/*2A" },
+  Codeine: { gene: "CYP2D6", diplotype: "*1/*1xN" },
+};
 
 export default function AnalyzePage() {
   const [file, setFile] = useState<File | null>(null);
   const [drugs, setDrugs] = useState("");
   const [isAnalyzing, setIsAnalyzing] = useState(false);
-  const [results, setResults] = useState<DrugResult[] | null>(null);
+  const [results, setResults] = useState<AnalyzeResponse[] | null>(null);
 
-  const handleAnalyze = () => {
+  const handleAnalyze = async () => {
     if (!file || !drugs) {
       toast.error("Please provide both a VCF file and drug name(s).");
       return;
@@ -26,14 +38,38 @@ export default function AnalyzePage() {
     setIsAnalyzing(true);
     setResults(null);
 
-    // Simulate analysis delay
-    setTimeout(() => {
-      setIsAnalyzing(false);
-      // For demo, we just return the mock results regardless of input
-      // In a real app, this would filter or fetch based on `drugs` and `file`
-      setResults(MOCK_RESULTS_MULTI);
+    try {
+      // Split drugs by comma and trim
+      const drugList = drugs
+        .split(",")
+        .map((d) => d.trim())
+        .filter((d) => d);
+
+      const analysisPromises = drugList.map(async (drug) => {
+        // Simulate extracting genetic data for this specific drug pathway from the VCF
+        // For demo purposes, we pick a mock diplotype based on the drug name to show variety
+        const geneData = MOCK_VCF_PARSER[drug] || {
+          gene: "CYP2C19",
+          diplotype: "*1/*1",
+        }; // Default fallbacks
+
+        return analyzeDrugRisk(
+          "PATIENT_001",
+          geneData.gene,
+          geneData.diplotype,
+          drug,
+        );
+      });
+
+      const analysisResults = await Promise.all(analysisPromises);
+      setResults(analysisResults);
       toast.success("Analysis complete");
-    }, 2500);
+    } catch (error) {
+      console.error("Analysis failed:", error);
+      toast.error("Analysis failed. Ensure backend is running.");
+    } finally {
+      setIsAnalyzing(false);
+    }
   };
 
   const handleReset = () => {
@@ -83,12 +119,6 @@ export default function AnalyzePage() {
                   <label className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
                     Genetic File (VCF)
                   </label>
-                  {/* Note: FileUpload handles its own state, but we also track it here. 
-                           Ideally FileUpload should be controlled or use a ref, but for this mock, 
-                           tracking `file` via callback is enough. 
-                           Resetting FileUpload requires a ref or key change. 
-                           For simplicity, we mount a fresh one on reset by key.
-                       */}
                   <FileUpload
                     key={file ? "loaded" : "empty"}
                     onFileSelect={setFile}
@@ -117,8 +147,9 @@ export default function AnalyzePage() {
             {/* Helper Text */}
             <div className="text-xs text-muted-foreground p-4 bg-muted/30 rounded-lg">
               <p>
-                <strong>Note:</strong> This is a demo. Upload any .vcf file and
-                enter any drug names to see the mock results.
+                <strong>Note:</strong> This demo simulates VCF parsing and sends
+                data to the Python backend. Ensure `backend` is running on port
+                8000.
               </p>
             </div>
           </div>
@@ -147,8 +178,7 @@ export default function AnalyzePage() {
                   <Loader2 className="h-4 w-4 animate-spin" />
                   <AlertTitle>Analyzing Genomic Data</AlertTitle>
                   <AlertDescription>
-                    Parsing VCF variants, mapping to CPIC guidelines, and
-                    generating AI insights...
+                    Sending VCF data to inference engine...
                   </AlertDescription>
                 </Alert>
 
