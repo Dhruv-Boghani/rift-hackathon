@@ -4,11 +4,6 @@ import cookieParser from "cookie-parser";
 import wakeNeon from "./src/connection/DB.wakeNeon.js";
 import authRoutes from "./src/routes/auth.routes.js";
 import userRoutes from "./src/routes/user.routes.js";
-import appointmentRoutes from "./src/routes/appointment.routes.js";
-import prescriptionRoutes from "./src/routes/prescription.routes.js";
-import medicalRecordRoutes from "./src/routes/medical-record.routes.js";
-import notificationRoutes from "./src/routes/notification.routes.js";
-import medicineRoutes from "./src/routes/medicine.routes.js";
 import swaggerUi from "swagger-ui-express";
 import swaggerSpec from "./src/config/swagger.js";
 
@@ -42,10 +37,5 @@ app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 // Routes
 app.use("/api/auth", authRoutes);
 app.use("/api/users", userRoutes);
-app.use("/api/appointments", appointmentRoutes);
-app.use("/api/prescriptions", prescriptionRoutes);
-app.use("/api/medical-records", medicalRecordRoutes);
-app.use("/api/notifications", notificationRoutes);
-app.use("/api/medicine", medicineRoutes);
 
 export default app;
