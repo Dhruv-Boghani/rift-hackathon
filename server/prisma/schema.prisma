@@ -34,7 +34,6 @@ model User {
   // Relations
   doctorProfile   DoctorProfile?
   patientProfile  PatientProfile?
-  notifications   Notification[]
 }
 
 // ===============================
@@ -51,10 +50,6 @@ model DoctorProfile {
   bio             String?
   consultationFee Float?
   isAvailable     Boolean @default(true)
-
-  // Relations
-  appointments    Appointment[]
-  prescriptions   Prescription[]
 }
 
 model PatientProfile {
@@ -65,11 +60,4 @@ model PatientProfile {
   age       Int?
   gender    String?
   address   String?
-
-  // Relations
-  appointments      Appointment[]
-  medicalRecords    MedicalRecord[]
-  aiAssessments     AIAssessment[]
-  prescriptions     Prescription[]
-  medicineSchedules MedicineSchedule[]
 }
