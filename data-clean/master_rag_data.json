@@ -1,0 +1,330 @@
+[
+    {
+        "drug": "CLOPIDOGREL",
+        "gene": "CYP2C19",
+        "risk_label": "Increased metabolism of citalopram and escitalopram to less active compounds when compared to CYP2C19 rapid and normal metabolizers. Lower plasma concentrations decrease the probability of clinical benefit.",
+        "clinical_recommendation": "Consider a clinically appropriate alternative antidepressant not predominantly metabolized by CYP2C19. If citalopram or escitalopram are clinically appropriate, and adequate efficacy is not achieved at standard maintenance dosing, consider titrating to a higher maintenance dose.",
+        "confidence_score": "Strong",
+        "allele_status_required": "N/A"
+    },
+    {
+        "drug": "CLOPIDOGREL",
+        "gene": "CYP2C19",
+        "risk_label": "Increase in metabolism of citalopram and escitalopram to less active compounds when compared to CYP2C19 normal metabolizers. Lower plasma concentrations decrease the probability of clinical benefit.",
+        "clinical_recommendation": "Initiate therapy with recommended starting dose. If patient does not adequately respond to recommended maintenance dosing, consider titrating to a higher maintenance dose or switching to a clinically appropriate alternative antidepressant not predominantly metabolized by CYP2C19.",
+        "confidence_score": "Optional",
+        "allele_status_required": "N/A"
+    },
+    {
+        "drug": "CLOPIDOGREL",
+        "gene": "CYP2C19",
+        "risk_label": "Normal metabolism",
+        "clinical_recommendation": "Initiate therapy with recommended starting dose",
+        "confidence_score": "Strong",
+        "allele_status_required": "N/A"
+    },
+    {
+        "drug": "CLOPIDOGREL",
+        "gene": "CYP2C19",
+        "risk_label": "Reduced metabolism when compared to CYP2C19 normal metabolizers. Higher plasma concentrations may increase the probability of side effects.",
+        "clinical_recommendation": "Initiate therapy with recommended starting dose. Consider a slower titration schedule and lower maintenance dose than normal metabolizers.",
+        "confidence_score": "Moderate",
+        "allele_status_required": "N/A"
+    },
+    {
+        "drug": "CLOPIDOGREL",
+        "gene": "CYP2C19",
+        "risk_label": "Reduced metabolism when compared to CYP2C19 normal metabolizers. Higher plasma concentrations may increase the probability of side effects.",
+        "clinical_recommendation": "Initiate therapy with recommended starting dose. Consider a slower titration schedule and lower maintenance dose than normal metabolizers.",
+        "confidence_score": "Moderate",
+        "allele_status_required": "N/A"
+    },
+    {
+        "drug": "CLOPIDOGREL",
+        "gene": "CYP2C19",
+        "risk_label": "Reduced metabolism of citalopram and escitalopram to less active compounds when compared to CYP2C19 normal and intermediate metabolizers. Higher plasma concentrations may increase the probability of side effects.",
+        "clinical_recommendation": "Consider a clinically appropriate antidepressant not predominantly metabolized by CYP2C19. If citalopram or escitalopram are clinically appropriate, consider a lower starting dose, slower titration schedule and 50% reduction of the standard maintenance dose as compared to normal metabolizers.",
+        "confidence_score": "Strong",
+        "allele_status_required": "N/A"
+    },
+    {
+        "drug": "CLOPIDOGREL",
+        "gene": "CYP2C19",
+        "risk_label": "Reduced metabolism of citalopram and escitalopram to less active compounds when compared to CYP2C19 normal and intermediate metabolizers. Higher plasma concentrations may increase the probability of side effects.",
+        "clinical_recommendation": "Consider a clinically appropriate antidepressant not predominantly metabolized by CYP2C19. If citalopram or escitalopram are clinically appropriate, consider a lower starting dose, slower titration schedule and 50% reduction of the standard maintenance dose as compared to normal metabolizers.",
+        "confidence_score": "Strong",
+        "allele_status_required": "N/A"
+    },
+    {
+        "drug": "CLOPIDOGREL",
+        "gene": "CYP2C19",
+        "risk_label": "n/a",
+        "clinical_recommendation": "No recommendation",
+        "confidence_score": "No Recommendation",
+        "allele_status_required": "N/A"
+    },
+    {
+        "drug": "CODEINE",
+        "gene": "CYP2D6",
+        "risk_label": "Increased formation of morphine leading to higher risk of toxicity",
+        "clinical_recommendation": "Avoid codeine use because of potential for serious toxicity. If opioid use is warranted, consider a non-tramadol opioid.",
+        "confidence_score": "Strong",
+        "allele_status_required": "N/A"
+    },
+    {
+        "drug": "CODEINE",
+        "gene": "CYP2D6",
+        "risk_label": "Increased formation of morphine leading to higher risk of toxicity",
+        "clinical_recommendation": "Avoid codeine use because of potential for serious toxicity. If opioid use is warranted, consider a non-tramadol opioid.",
+        "confidence_score": "Strong",
+        "allele_status_required": "N/A"
+    },
+    {
+        "drug": "CODEINE",
+        "gene": "CYP2D6",
+        "risk_label": "Increased formation of morphine leading to higher risk of toxicity",
+        "clinical_recommendation": "Avoid codeine use because of potential for serious toxicity. If opioid use is warranted, consider a non-tramadol opioid.",
+        "confidence_score": "Strong",
+        "allele_status_required": "N/A"
+    },
+    {
+        "drug": "CODEINE",
+        "gene": "CYP2D6",
+        "risk_label": "n/a",
+        "clinical_recommendation": "No recommendation",
+        "confidence_score": "No Recommendation",
+        "allele_status_required": "N/A"
+    },
+    {
+        "drug": "CODEINE",
+        "gene": "CYP2D6",
+        "risk_label": "Reduced morphine formation",
+        "clinical_recommendation": "Use codeine label recommended age- or weight-specific dosing. If no response and opioid use is warranted, consider a non-tramadol opioid.",
+        "confidence_score": "Moderate",
+        "allele_status_required": "N/A"
+    },
+    {
+        "drug": "CODEINE",
+        "gene": "CYP2D6",
+        "risk_label": "Reduced morphine formation",
+        "clinical_recommendation": "Use codeine label recommended age- or weight-specific dosing. If no response and opioid use is warranted, consider a non-tramadol opioid.",
+        "confidence_score": "Moderate",
+        "allele_status_required": "N/A"
+    },
+    {
+        "drug": "CODEINE",
+        "gene": "CYP2D6",
+        "risk_label": "Reduced morphine formation",
+        "clinical_recommendation": "Use codeine label recommended age- or weight-specific dosing. If no response and opioid use is warranted, consider a non-tramadol opioid.",
+        "confidence_score": "Moderate",
+        "allele_status_required": "N/A"
+    },
+    {
+        "drug": "CODEINE",
+        "gene": "CYP2D6",
+        "risk_label": "Reduced morphine formation",
+        "clinical_recommendation": "Use codeine label recommended age- or weight-specific dosing. If no response and opioid use is warranted, consider a non-tramadol opioid.",
+        "confidence_score": "Moderate",
+        "allele_status_required": "N/A"
+    },
+    {
+        "drug": "CODEINE",
+        "gene": "CYP2D6",
+        "risk_label": "Expected morphine formation",
+        "clinical_recommendation": "Use codeine label recommended age- or weight-specific dosing.",
+        "confidence_score": "Strong",
+        "allele_status_required": "N/A"
+    },
+    {
+        "drug": "CODEINE",
+        "gene": "CYP2D6",
+        "risk_label": "Expected morphine formation",
+        "clinical_recommendation": "Use codeine label recommended age- or weight-specific dosing.",
+        "confidence_score": "Strong",
+        "allele_status_required": "N/A"
+    },
+    {
+        "drug": "CODEINE",
+        "gene": "CYP2D6",
+        "risk_label": "Expected morphine formation",
+        "clinical_recommendation": "Use codeine label recommended age- or weight-specific dosing.",
+        "confidence_score": "Strong",
+        "allele_status_required": "N/A"
+    },
+    {
+        "drug": "CODEINE",
+        "gene": "CYP2D6",
+        "risk_label": "Expected morphine formation",
+        "clinical_recommendation": "Use codeine label recommended age- or weight-specific dosing.",
+        "confidence_score": "Strong",
+        "allele_status_required": "N/A"
+    },
+    {
+        "drug": "CODEINE",
+        "gene": "CYP2D6",
+        "risk_label": "Expected morphine formation",
+        "clinical_recommendation": "Use codeine label recommended age- or weight-specific dosing.",
+        "confidence_score": "Strong",
+        "allele_status_required": "N/A"
+    },
+    {
+        "drug": "CODEINE",
+        "gene": "CYP2D6",
+        "risk_label": "Greatly reduced morphine formation leading to diminished analgesia.",
+        "clinical_recommendation": "Avoid codeine use because of possibility of diminished analgesia. If opioid use is warranted, consider a non-tramadol opioid.",
+        "confidence_score": "Strong",
+        "allele_status_required": "N/A"
+    },
+    {
+        "drug": "CODEINE",
+        "gene": "CYP2D6",
+        "risk_label": "Increased formation of morphine leading to higher risk of toxicity",
+        "clinical_recommendation": "Avoid codeine use because of potential for serious toxicity. If opioid use is warranted, consider a non-tramadol opioid.",
+        "confidence_score": "Strong",
+        "allele_status_required": "N/A"
+    },
+    {
+        "drug": "CODEINE",
+        "gene": "CYP2D6",
+        "risk_label": "Increased formation of morphine leading to higher risk of toxicity",
+        "clinical_recommendation": "Avoid codeine use because of potential for serious toxicity. If opioid use is warranted, consider a non-tramadol opioid.",
+        "confidence_score": "Strong",
+        "allele_status_required": "N/A"
+    },
+    {
+        "drug": "CODEINE",
+        "gene": "CYP2D6",
+        "risk_label": "Increased formation of morphine leading to higher risk of toxicity",
+        "clinical_recommendation": "Avoid codeine use because of potential for serious toxicity. If opioid use is warranted, consider a non-tramadol opioid.",
+        "confidence_score": "Strong",
+        "allele_status_required": "N/A"
+    },
+    {
+        "drug": "CODEINE",
+        "gene": "CYP2D6",
+        "risk_label": "Increased formation of morphine leading to higher risk of toxicity",
+        "clinical_recommendation": "Avoid codeine use because of potential for serious toxicity. If opioid use is warranted, consider a non-tramadol opioid.",
+        "confidence_score": "Strong",
+        "allele_status_required": "N/A"
+    },
+    {
+        "drug": "CODEINE",
+        "gene": "CYP2D6",
+        "risk_label": "Increased formation of morphine leading to higher risk of toxicity",
+        "clinical_recommendation": "Avoid codeine use because of potential for serious toxicity. If opioid use is warranted, consider a non-tramadol opioid.",
+        "confidence_score": "Strong",
+        "allele_status_required": "N/A"
+    },
+    {
+        "drug": "CODEINE",
+        "gene": "CYP2D6",
+        "risk_label": "Increased formation of morphine leading to higher risk of toxicity",
+        "clinical_recommendation": "Avoid codeine use because of potential for serious toxicity. If opioid use is warranted, consider a non-tramadol opioid.",
+        "confidence_score": "Strong",
+        "allele_status_required": "N/A"
+    },
+    {
+        "drug": "CODEINE",
+        "gene": "CYP2D6",
+        "risk_label": "Increased formation of morphine leading to higher risk of toxicity",
+        "clinical_recommendation": "Avoid codeine use because of potential for serious toxicity. If opioid use is warranted, consider a non-tramadol opioid.",
+        "confidence_score": "Strong",
+        "allele_status_required": "N/A"
+    },
+    {
+        "drug": "CODEINE",
+        "gene": "CYP2D6",
+        "risk_label": "Increased formation of morphine leading to higher risk of toxicity",
+        "clinical_recommendation": "Avoid codeine use because of potential for serious toxicity. If opioid use is warranted, consider a non-tramadol opioid.",
+        "confidence_score": "Strong",
+        "allele_status_required": "N/A"
+    },
+    {
+        "drug": "FLUOROURACIL",
+        "gene": "DPYD",
+        "risk_label": "Normal DPD activity and \"normal\" risk for fluoropyrimidine toxicity",
+        "clinical_recommendation": "Based on genotype, there is no indication to change dose or therapy. Use label-recommended dosage and administration.",
+        "confidence_score": "Strong",
+        "allele_status_required": "N/A"
+    },
+    {
+        "drug": "FLUOROURACIL",
+        "gene": "DPYD",
+        "risk_label": "Decreased DPD activity (leukocyte DPD activity at 30% to 70% that of the normal population) and increased risk for severe or even fatal drug toxicity when treated with fluoropyrimidine drugs",
+        "clinical_recommendation": "Reduce starting dose by 50% followed by titration of dose based on toxicity or therapeutic drug monitoring (if available).",
+        "confidence_score": "Moderate",
+        "allele_status_required": "N/A"
+    },
+    {
+        "drug": "FLUOROURACIL",
+        "gene": "DPYD",
+        "risk_label": "Decreased DPD activity (leukocyte DPD activity at 30% to 70% that of the normal population) and increased risk for severe or even fatal drug toxicity when treated with fluoropyrimidine drugs",
+        "clinical_recommendation": "Reduce starting dose by 50% followed by titration of dose based on toxicity or therapeutic drug monitoring (if available). Patients with the c.2846A>T/c.2846A>T genotype may require >50% reduction in starting dose.",
+        "confidence_score": "Strong",
+        "allele_status_required": "N/A"
+    },
+    {
+        "drug": "FLUOROURACIL",
+        "gene": "DPYD",
+        "risk_label": "Complete DPD deficiency and increased risk for severe or even fatal drug toxicity when treated with fluoropyrimidine drugs.",
+        "clinical_recommendation": "Avoid use of 5-fluorouracil or 5-fluorouracil prodrug-based regimens. In the event, based on clinical advice, alternative agents are not considered a suitable therapeutic option, 5-fluorouracil should be administered at a strongly reduced dose with early therapeutic drug monitoring.",
+        "confidence_score": "Strong",
+        "allele_status_required": "N/A"
+    },
+    {
+        "drug": "FLUOROURACIL",
+        "gene": "DPYD",
+        "risk_label": "Complete DPD deficiency and increased risk for severe or even fatal drug toxicity when treated with fluoropyrimidine drugs.",
+        "clinical_recommendation": "Avoid use of 5-fluorouracil or 5-fluorouracil prodrug-based regimens.",
+        "confidence_score": "Strong",
+        "allele_status_required": "N/A"
+    },
+    {
+        "drug": "SIMVASTATIN",
+        "gene": "SLCO1B1",
+        "risk_label": "Typical myopathy risk and statin exposure",
+        "clinical_recommendation": "Prescribe desired starting dose and adjust doses based on disease-specific guidelines.",
+        "confidence_score": "Strong",
+        "allele_status_required": "N/A"
+    },
+    {
+        "drug": "SIMVASTATIN",
+        "gene": "SLCO1B1",
+        "risk_label": "Typical myopathy risk and statin exposure",
+        "clinical_recommendation": "Prescribe desired starting dose and adjust doses based on disease-specific guidelines.",
+        "confidence_score": "Strong",
+        "allele_status_required": "N/A"
+    },
+    {
+        "drug": "SIMVASTATIN",
+        "gene": "SLCO1B1",
+        "risk_label": "Increased simvastatin acid exposure as compared to normal function; increased risk of myopathy",
+        "clinical_recommendation": "Prescribe an alternative statin depending on the desired potency (see Figure 1 of PMID: 35152405 for recommendations for alternative statins). If simvastatin therapy is warranted, limit dose to <20mg/day.",
+        "confidence_score": "Strong",
+        "allele_status_required": "N/A"
+    },
+    {
+        "drug": "SIMVASTATIN",
+        "gene": "SLCO1B1",
+        "risk_label": "Increased simvastatin acid exposure as compared to normal function; increased risk of myopathy",
+        "clinical_recommendation": "Prescribe an alternative statin depending on the desired potency (see Figure 1 of PMID: 35152405 for recommendations for alternative statins). If simvastatin therapy is warranted, limit dose to <20mg/day.",
+        "confidence_score": "Strong",
+        "allele_status_required": "N/A"
+    },
+    {
+        "drug": "SIMVASTATIN",
+        "gene": "SLCO1B1",
+        "risk_label": "Increased simvastatin acid exposure compared to normal and decreased function; highly increased myopathy risk",
+        "clinical_recommendation": "Prescribe an alternative statin depending on the desired potency (see Figure 1 of PMID: 35152405 for recommendations for alternative statins).",
+        "confidence_score": "Strong",
+        "allele_status_required": "N/A"
+    },
+    {
+        "drug": "SIMVASTATIN",
+        "gene": "SLCO1B1",
+        "risk_label": "n/a",
+        "clinical_recommendation": "No recommendation",
+        "confidence_score": "No Recommendation",
+        "allele_status_required": "N/A"
+    }
+]
